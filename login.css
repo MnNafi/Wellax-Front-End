@@ -1,0 +1,240 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}  */
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.loginPageContainer {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; /* Set a high z-index value to ensure it appears on top of other elements */
+}
+
+
+ 
+ /* <!-- login-page code --> */
+ .login-page {
+    display: flex;
+    width: 800px;
+    height: 600px;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+ }
+
+ .login-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(images/login_background.png);
+  backdrop-filter: blur(10px);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 0.85; /* Adjust the opacity value as needed */
+  z-index: -1;
+  border: 5px solid white;
+  border-radius: 50px;
+}
+
+ .login-page-logo{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+ }
+
+ .login-page-logo :hover{
+    transform: scale(1.01); /* Apply a scale transformation on hover */
+  }
+
+  /* .signup {
+    position: relative;
+  } */
+  
+  .signup-button {
+    position: absolute;
+    text-decoration: none;
+    font-size: 20px;
+    top: 80px;
+    right: 80px;
+    padding: 10px 20px;
+    color: #2F857E;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .signup-button:hover {
+    color: white;
+  }
+  
+
+ .container {
+    padding: 20px;
+    text-align: center;
+    color: #2F857E;
+  }
+ 
+  .login-tagline{
+    margin-bottom: 20px;
+  }
+  
+  .login-tagline p {
+    margin: 5px;
+  }
+  
+  .input-box {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 400px;
+    background-color: white;
+    border: 1px solid #2F857E;
+    border-radius: 40px;
+    display: block;
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .input-box::placeholder {
+    color: #2F857E; /* Set placeholder color */
+  }
+  
+  /* Hover effect */
+  .input-box:hover {
+    transform: scale(1.05); /* Apply scale transform on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add gray shadow on hover */
+  }
+
+  .social-logos {
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    opacity: 1;
+    transition: opacity 0.3s ease; /* Add transition for smooth hover effect */
+  }
+  
+  .social-logos img {
+    height: 30px;
+    width: 30px;
+  }
+  
+  .social-link:hover .social-logo {
+    opacity: 0.8;
+  }
+  
+  
+  .login-button{
+    padding: 10px 30px;
+    margin-left: auto;
+    background-color: white;
+    color: #2F857E;
+    border: none;
+    font-size: 20px;
+    border-radius: 40px;
+    display: flex;
+    float: left;
+    
+  }
+
+  .forgot-password-button{
+    color: #2F857E;
+    text-decoration: none;
+    display:flex;
+    padding: 12px;
+    width: fit-content;
+    height: fit-content;
+  }
+  
+  .login-button:hover{
+    background-color: #25766E;
+    color: white;
+  }
+
+  .forgot-password-button:hover{
+    color: white;
+  }
+
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+  }
+
+
+  /* Signup Page CSS Start*/
+
+  .signup-with{
+    text-align: left;
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
+
+
+  .signup-button-bellow{
+    padding: 10px 30px;
+    margin-left: auto;
+    background-color: white;
+    color: #2F857E;
+    border: none;
+    font-size: 20px;
+    border-radius: 40px;
+    display: flex;
+    float: left;
+    
+  }
+
+  .signup-button-bellow:hover{
+    background-color: #25766E;
+    color: white;
+  }
+
+  .already-account{
+    color: #2F857E;
+    text-decoration: none;
+    display:flex;
+    padding: 12px;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .already-account a{
+    color: #2F857E;
+    padding-left: 10px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .already-account a:hover{
+    color: white;
+  }
+  
