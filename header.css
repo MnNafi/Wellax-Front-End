@@ -1,0 +1,458 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+
+body {
+  background-color: #F4F5F8;
+  height: 100%;
+  width: 100%;
+
+}
+
+body p {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: .5px;
+}
+
+body a {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: .5px;
+
+}
+
+
+
+/* Header CSS Design Start */
+header {
+  background-image: linear-gradient(rgba(244, 245, 248, 0.8), rgba(71, 140, 141, .8)), url(images/header.png);
+  height: 150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
+.upper-header {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  left: 70px;
+}
+
+.logo img {
+  height: 70px;
+  width: 270px;
+}
+
+
+/* Custom CSS Hover Effect */
+.hover {
+  transition: transform 0.3s ease;
+}
+
+.hover:hover {
+  transform: scale(1.01);
+}
+
+
+
+
+/* Right Header design Start Here */
+
+.right-header {
+  display: inline-block;
+  display: flex;
+}
+
+.service ul {
+  width: 345px;
+  margin-top: 20px;
+}
+
+.service ul li {
+  float: left;
+}
+
+.guide-text {
+  text-align: center;
+  color: #0F6A6C;
+  font-weight: 700;
+}
+
+.call {
+  font-weight: 700;
+}
+
+.nav-border-left a {
+  color: #0F6A6C;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  width: 120px;
+  border: 2px solid #0F6A6C;
+  border-radius: 25px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.nav-border-right a {
+  color: #0F6A6C;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  border: 2px solid #0F6A6C;
+  border-radius: 25px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.user-container {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+.login-icon {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.login-icon i {
+  margin-top: 23px;
+  font-size: 30px;
+  color: #0F6A6C;
+  transition: transform 0.3s ease;
+}
+
+.login-icon i:hover {
+  transform: scale(1.1);
+  /* Apply scale transform on hover */
+}
+
+.phone-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Right Header Design End Here */
+
+/* Search Bar CSS */
+.search-bar {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 40px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  border-radius: 45px;
+  overflow: hidden;
+  /* Ensures the border-radius is applied properly */
+}
+
+
+.search-bar input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  padding-left: 30px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.search-bar button[type="submit"] {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.fa-search {
+  color: #2F857E;
+  font-size: 20px;
+  padding-right: 20px;
+}
+
+.search-bar input[type="text"]::placeholder {
+  color: #2F857E;
+  opacity: 50%;
+}
+
+/* Search Bar CSS End */
+
+/* CSS for the login page pop-up container */
+.popup {
+  display: none;
+  /* Initially hide the pop-up */
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  /* Semi-transparent background overlay */
+  z-index: 9999;
+  /* Ensure it appears above other content */
+}
+
+/* CSS for the login page pop-up content */
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  /* Add a background color for the popup content */
+}
+
+
+
+/* Header Design Ends Here */
+
+
+
+
+.loginPageContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Set a high z-index value to ensure it appears on top of other elements */
+}
+
+
+
+/* <!-- login-page code --> */
+.login-page {
+  display: flex;
+  width: 800px;
+  height: 600px;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('images/login_background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  border: 5px solid white;
+  border-radius: 50px;
+}
+
+.login-page::before {
+  content: "";
+  position: absolute;
+  background-image: url('images/login_background.png');
+  opacity: 0.5;
+  /* 0.5 represents 50% opacity */
+  z-index: -1;
+  /* Ensure the pseudo-element is behind the content */
+  backdrop-filter: blur(10px);
+  /* Apply blur to the pseudo-element */
+}
+
+
+.login-page-logo {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.login-page-logo :hover {
+  transform: scale(1.01);
+  /* Apply a scale transformation on hover */
+}
+
+.signup-button {
+  position: absolute;
+  text-decoration: none;
+  font-size: 20px;
+  top: 80px;
+  right: 80px;
+  padding: 10px 20px;
+  color: #2F857E;
+  border: none;
+  border-radius: 5px;
+}
+
+.signup-button:hover {
+  color: white;
+}
+
+
+.container {
+  padding: 20px;
+  text-align: center;
+  color: #2F857E;
+}
+
+.login-tagline {
+  margin-bottom: 20px;
+}
+
+.login-tagline p {
+  margin: 5px;
+}
+
+.input-box {
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 400px;
+  background-color: white;
+  border: 1px solid #2F857E;
+  border-radius: 40px;
+  display: block;
+  margin-left: auto;
+  /* Center horizontally */
+  margin-right: auto;
+  /* Center horizontally */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-box::placeholder {
+  color: #2F857E;
+  /* Set placeholder color */
+}
+
+/* Hover effect */
+.input-box:hover {
+  transform: scale(1.05);
+  /* Apply scale transform on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* Add gray shadow on hover */
+}
+
+.social-logos {
+  display: flex;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  /* Add transition for smooth hover effect */
+}
+
+.social-logos img {
+  height: 30px;
+  width: 30px;
+}
+
+.social-link:hover .social-logo {
+  opacity: 0.8;
+}
+
+
+.login-button {
+  padding: 10px 30px;
+  margin-left: auto;
+  background-color: white;
+  color: #2F857E;
+  border: none;
+  font-size: 20px;
+  border-radius: 40px;
+  display: flex;
+  float: left;
+
+}
+
+.forgot-password-button {
+  color: #2F857E;
+  text-decoration: none;
+  display: flex;
+  padding: 12px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.login-button:hover {
+  background-color: #25766E;
+  color: white;
+}
+
+.forgot-password-button:hover {
+  color: white;
+}
+
+
+
+
+/* Signup Page CSS Start*/
+
+.signup-with {
+  text-align: left;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+
+.signup-button-bellow {
+  padding: 10px 30px;
+  margin-left: auto;
+  background-color: white;
+  color: #2F857E;
+  border: none;
+  font-size: 20px;
+  border-radius: 40px;
+  display: flex;
+  float: left;
+
+}
+
+.signup-button-bellow:hover {
+  background-color: #25766E;
+  color: white;
+}
+
+.already-account {
+  color: #2F857E;
+  text-decoration: none;
+  display: flex;
+  padding: 12px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.already-account button {
+  background-color: transparent;
+  border: none;
+  color: #25766E;
+  text-align: center;
+  margin-left: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.already-account a:hover {
+  color: white;
+}

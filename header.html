@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wellax Web Application</title>
+    <!-- custom css link -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="header.css" />
+
+    <!-- Google Front Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Icon Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- W3.css Bootstrap Class CSS -->
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="upper-header">
+            <div>
+                <a href="index.html" class="logo hover"><img src="images/main.png" alt="" /></a>
+            </div>
+            <div class="right-header">
+                <div class="service">
+                    <ul>
+                        <li>
+                            <div>
+                                <div class="guide-text">
+                                    <p>QUICK GUIDE</p>
+                                </div>
+                                <div class="nav-border-left hover">
+                                    <a href="tel:3201" class="call">
+                                        <img class="phone-icon" src="images/icon_call(green).png" alt="" />
+                                        <p class="call">3201</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <div class="guide-text">
+                                    <p>CALL AMBULANCE</p>
+                                </div>
+                                <div class="nav-border-right hover">
+                                    <a href="tel:+88 01783870929">
+                                        <img class="phone-icon" src="images/icon_call(green).png" alt="" />
+                                        <p class="">+88 01783870929</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <div class="nav-border-left">
+                                    <a href="#" class="hover">Blood Bank</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <div class="nav-border-right">
+                                    <a href="#" class="hover"> Offers and Packages</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user-container">
+                    <button id="loginButton" class="login-icon">
+                        <i class="fas fa-user"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Doctor, Consultant, Hospital, Diagnostic, Medicine Search" />
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+
+
+    <!-- Login Popup -->
+    <div id="loginPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closePopup">&times;</span>
+            <div class="loginPageContainer">
+                <div class="login-page">
+                    <div class="container">
+                        <div class="login-page-logo">
+                            <a href="index.html"><img src="images/main.png" alt="Company Logo"></a>
+                        </div>
+
+                        <button id="signupButton" class="signup">
+                            <p class="signup-button">Sign Up</p>
+                        </button>
+
+                        <div class="login-tagline">
+                            <p>Get the most advanced emergency care</p>
+                            <p>anywhere in just minutes</p>
+                        </div>
+                        <div class="login-form">
+                            <input type="text" placeholder="ENTER COUNTRY*" class="input-box">
+                            <input type="text" placeholder="ENTER PHONE NUMBER*" class="input-box">
+                            <input type="password" placeholder="PASSWORD*" class="input-box">
+
+                            <div class="social-logos">
+                                <a href="#" class="social-link">
+                                    <div class="social-logo facebook"><img src="images/facebook.png" alt=""></div>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <div class="social-logo google"><img src="images/google.png" alt=""></div>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <div class="social-logo twitter"><img src="images/twitter.png" alt=""></div>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <div class="social-logo linkedin"><img src="images/linkdin.png" alt=""></div>
+                                </a>
+                            </div>
+                            <a href="Home page after login - Core Services.html"><button
+                                    class="login-button">LOGIN</button>
+                            </a>
+
+                            <a class="forgot-password-button" href="#">Forgot Password</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="signupPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closeSignupPopup">&times;</span>
+            <div class="loginPageContainer">
+                <div class="login-page">
+                    <div class="container">
+                        <div class="login-page-logo">
+                            <a href="index.html"><img src="images/main.png" alt="Company Logo"></a>
+                        </div>
+
+                        <div class="login-tagline">
+                            <p>Get the most advanced emergency care</p>
+                            <p>anywhere in just minutes</p>
+                        </div>
+                        <div class="login-form">
+                            <input type="text" placeholder="ENTER COUNTRY*" class="input-box">
+                            <input type="text" placeholder="ENTER PHONE NUMBER*" class="input-box">
+                            <input type="password" placeholder="PASSWORD*" class="input-box">
+
+                            <p class="signup-with">You Can Signup with:</p>
+
+                            <div class="social-logos">
+                                <a href="#" class="social-link">
+                                    <div class="social-logo facebook"><img src="images/facebook.png" alt=""></div>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <div class="social-logo google"><img src="images/google.png" alt=""></div>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <div class="social-logo twitter"><img src="images/twitter.png" alt=""></div>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <div class="social-logo linkedin"><img src="images/linkdin.png" alt=""></div>
+                                </a>
+                            </div>
+                            <button class="signup-button-bellow">SIGNUP</button>
+                            <p class="already-account">Already Have an Account? <button id="switchToLogin">Login
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="JS/script.js"></script> -->
+    <script src="JS/login.js"></script>
+
+</body>
+
+</html>
